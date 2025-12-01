@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.MemorialRecordMapper">
+
+    <!-- 根据用户ID查询祭扫记录 -->
+    <select id="selectByUserId" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE user_id = #{userId} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+    <!-- 根据逝者ID查询祭扫记录 -->
+    <select id="selectByDeceasedId" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE deceased_id = #{deceasedId} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+    <!-- 根据墓位ID查询祭扫记录 -->
+    <select id="selectByTombId" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE tomb_id = #{tombId} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+    <!-- 根据祭扫类型查询 -->
+    <select id="selectByMemorialType" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE memorial_type = #{memorialType} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+    <!-- 查询指定日期范围的祭扫记录 -->
+    <select id="selectByDateRange" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE memorial_date BETWEEN #{startDate} AND #{endDate} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+    <!-- 查询用户在指定墓位的祭扫记录 -->
+    <select id="selectByUserAndTomb" resultType="com.cemetery.domain.entity.MemorialRecord">
+        SELECT * FROM memorial_record
+        WHERE user_id = #{userId} AND tomb_id = #{tombId} AND deleted = 0
+        ORDER BY memorial_date DESC
+    </select>
+
+</mapper>

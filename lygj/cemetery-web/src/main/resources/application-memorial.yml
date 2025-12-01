@@ -1,0 +1,79 @@
+# 数字纪念空间专项配置
+
+# 文件上传配置
+file:
+  upload:
+    # 上传路径
+    path: /data/cemetery/upload
+    # 访问域名
+    domain: http://localhost:8080
+    # 分块上传临时目录
+    chunk-temp-path: /data/cemetery/upload/chunks
+    # 分块大小（MB）
+    chunk-size: 5
+    # 最大文件大小（MB）
+    max-file-size: 500
+    # 图片压缩质量（0-1）
+    image-quality: 0.8
+    # 图片最大尺寸
+    image-max-width: 1920
+    image-max-height: 1080
+    # 缩略图尺寸
+    thumbnail-width: 300
+    thumbnail-height: 200
+    # 视频缩略图截取时间（秒）
+    video-thumbnail-time: 3
+    # 允许的文件格式
+    allowed-image-formats: jpg,jpeg,png,gif,webp,bmp
+    allowed-video-formats: mp4,avi,mov,wmv,flv,mkv
+    allowed-audio-formats: mp3,wav,flac,aac,ogg
+    # 是否启用WebP转换
+    enable-webp-conversion: true
+    # 存储类型：local, oss, qiniu
+    storage-type: local
+
+# 缓存配置
+cache:
+  redis:
+    # 是否启用缓存
+    enabled: true
+    # 缓存key前缀
+    key-prefix: cemetery:
+    # 默认过期时间（秒）
+    default-expire: 3600
+    # 热点数据过期时间（秒）
+    hot-data-expire: 7200
+    # 列表数据过期时间（秒）
+    list-expire: 1800
+    # 详情数据过期时间（秒）
+    detail-expire: 3600
+    # 统计数据过期时间（秒）
+    statistics-expire: 300
+    # 是否启用缓存预热
+    preload-enabled: true
+    # 热点数据访问阈值
+    hot-data-threshold: 100
+    # 是否启用布隆过滤器
+    bloom-filter-enabled: true
+    # 布隆过滤器预期元素数量
+    bloom-filter-expected-insertions: 100000
+    # 布隆过滤器误判率
+    bloom-filter-fpp: 0.01
+    # 缓存更新策略：lazy, active
+    update-strategy: lazy
+    # 是否启用多级缓存
+    multi-level-enabled: false
+
+# Elasticsearch配置
+spring:
+  elasticsearch:
+    # 连接地址
+    uris: http://localhost:9200
+    # 用户名
+    username: elastic
+    # 密码
+    password: elastic
+    # 连接超时时间
+    connection-timeout: 3s
+    # 读取超时时间
+    socket-timeout: 5s

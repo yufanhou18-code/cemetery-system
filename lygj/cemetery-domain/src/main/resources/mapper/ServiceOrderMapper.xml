@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.ServiceOrderMapper">
+
+    <!-- 根据订单编号查询 -->
+    <select id="selectByOrderNo" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE order_no = #{orderNo} AND deleted = 0
+        LIMIT 1
+    </select>
+
+    <!-- 根据用户ID查询订单列表 -->
+    <select id="selectByUserId" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE user_id = #{userId} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据墓位ID查询订单列表 -->
+    <select id="selectByTombId" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE tomb_id = #{tombId} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据订单状态查询 -->
+    <select id="selectByStatus" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE status = #{status} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据服务类型查询 -->
+    <select id="selectByServiceType" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE service_type = #{serviceType} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据预约日期查询订单 -->
+    <select id="selectByAppointmentDate" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE appointment_date = #{appointmentDate} AND deleted = 0
+        ORDER BY appointment_time
+    </select>
+
+    <!-- 查询用户指定状态的订单 -->
+    <select id="selectByUserIdAndStatus" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE user_id = #{userId} AND status = #{status} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 查询待支付订单 -->
+    <select id="selectPendingPaymentOrders" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE status = 1 AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据服务人员ID查询订单 -->
+    <select id="selectByServiceStaffId" resultType="com.cemetery.domain.entity.ServiceOrder">
+        SELECT * FROM service_order
+        WHERE service_staff_id = #{staffId} AND deleted = 0
+        ORDER BY appointment_date DESC, appointment_time
+    </select>
+
+</mapper>

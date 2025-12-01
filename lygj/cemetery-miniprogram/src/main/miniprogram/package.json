@@ -1,0 +1,12 @@
+{
+  "name": "cemetery-miniprogram",
+  "version": "1.0.0",
+  "description": "陵园管家微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["小程序"],
+  "author": "",
+  "license": "MIT"
+}

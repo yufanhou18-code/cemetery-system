@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.CemeteryNoticeMapper">
+
+    <!-- 根据公告类型查询 -->
+    <select id="selectByNoticeType" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE notice_type = #{noticeType} AND deleted = 0
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 根据状态查询公告 -->
+    <select id="selectByStatus" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE status = #{status} AND deleted = 0
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 根据优先级查询 -->
+    <select id="selectByPriority" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE priority = #{priority} AND deleted = 0
+        ORDER BY publish_time DESC
+    </select>
+
+    <!-- 查询已发布的公告 -->
+    <select id="selectPublishedNotices" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE status = 1 AND deleted = 0
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 查询有效期内的公告 -->
+    <select id="selectValidNotices" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE status = 1 
+          AND deleted = 0
+          AND publish_time &lt;= #{currentDate}
+          AND (expire_time IS NULL OR expire_time &gt;= #{currentDate})
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 根据标题模糊查询 -->
+    <select id="selectByTitleLike" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE title LIKE CONCAT('%', #{title}, '%') AND deleted = 0
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 查询重要公告 -->
+    <select id="selectImportantNotices" resultType="com.cemetery.domain.entity.CemeteryNotice">
+        SELECT * FROM cemetery_notice
+        WHERE priority IN (1, 2) AND status = 1 AND deleted = 0
+        ORDER BY priority DESC, publish_time DESC
+    </select>
+
+    <!-- 增加阅读次数 -->
+    <update id="incrementViewCount">
+        UPDATE cemetery_notice
+        SET view_count = view_count + 1
+        WHERE id = #{id}
+    </update>
+
+</mapper>

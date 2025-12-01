@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.FamilyMemberMapper">
+
+    <!-- 根据用户ID查询家属关系列表 -->
+    <select id="selectByUserId" resultType="com.cemetery.domain.entity.FamilyMember">
+        SELECT * FROM family_member
+        WHERE user_id = #{userId} AND deleted = 0
+        ORDER BY is_primary DESC, create_time DESC
+    </select>
+
+    <!-- 根据逝者ID查询家属列表 -->
+    <select id="selectByDeceasedId" resultType="com.cemetery.domain.entity.FamilyMember">
+        SELECT * FROM family_member
+        WHERE deceased_id = #{deceasedId} AND deleted = 0
+        ORDER BY is_primary DESC, create_time DESC
+    </select>
+
+    <!-- 查询逝者的主要联系人 -->
+    <select id="selectPrimaryContact" resultType="com.cemetery.domain.entity.FamilyMember">
+        SELECT * FROM family_member
+        WHERE deceased_id = #{deceasedId} AND is_primary = 1 AND deleted = 0
+        LIMIT 1
+    </select>
+
+    <!-- 根据手机号查询 -->
+    <select id="selectByPhone" resultType="com.cemetery.domain.entity.FamilyMember">
+        SELECT * FROM family_member
+        WHERE phone = #{phone} AND deleted = 0
+        ORDER BY create_time DESC
+    </select>
+
+</mapper>

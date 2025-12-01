@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="banner">
+    <image class="banner-img" src="/images/banner.png" mode="aspectFill"></image>
+  </view>
+
+  <view class="page-section">
+    <view class="page-title">快捷服务</view>
+    <view class="service-list">
+      <view class="service-item" bindtap="navigateToReservation">
+        <image class="service-icon" src="/images/icon_reservation.png"></image>
+        <text class="service-text">预约祭扫</text>
+      </view>
+      <view class="service-item" bindtap="navigateToGrave">
+        <image class="service-icon" src="/images/icon_grave.png"></image>
+        <text class="service-text">墓位查询</text>
+      </view>
+      <view class="service-item" bindtap="navigateToOnlineWorship">
+        <image class="service-icon" src="/images/icon_worship.png"></image>
+        <text class="service-text">在线祭扫</text>
+      </view>
+      <view class="service-item" bindtap="navigateToNavigation">
+        <image class="service-icon" src="/images/icon_navigation.png"></image>
+        <text class="service-text">墓园导航</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section">
+    <view class="page-title">最新公告</view>
+    <view class="notice-list">
+      <view class="notice-item" wx:for="{{notices}}" wx:key="id">
+        <text class="notice-title">{{item.title}}</text>
+        <text class="notice-date">{{item.date}}</text>
+      </view>
+    </view>
+  </view>
+</view>

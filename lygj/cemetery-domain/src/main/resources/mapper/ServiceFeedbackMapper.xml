@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.ServiceFeedbackMapper">
+    
+    <!-- 根据反馈编号查询 -->
+    <select id="selectByFeedbackNo" resultType="com.cemetery.domain.entity.ServiceFeedback">
+        SELECT * FROM service_feedback 
+        WHERE feedback_no = #{feedbackNo} AND deleted = 0 
+        LIMIT 1
+    </select>
+    
+    <!-- 根据服务商ID分页查询反馈 -->
+    <select id="selectByProviderId" resultType="com.cemetery.domain.entity.ServiceFeedback">
+        SELECT * FROM service_feedback
+        <where>
+            provider_id = #{providerId} AND deleted = 0
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY is_top DESC, feedback_time DESC
+    </select>
+    
+    <!-- 根据服务项目ID分页查询反馈 -->
+    <select id="selectByServiceId" resultType="com.cemetery.domain.entity.ServiceFeedback">
+        SELECT * FROM service_feedback
+        <where>
+            service_id = #{serviceId} AND deleted = 0 AND audit_status = 2
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY is_top DESC, like_count DESC, feedback_time DESC
+    </select>
+    
+    <!-- 根据用户ID分页查询反馈 -->
+    <select id="selectByUserId" resultType="com.cemetery.domain.entity.ServiceFeedback">
+        SELECT * FROM service_feedback
+        WHERE user_id = #{userId} AND deleted = 0
+        ORDER BY feedback_time DESC
+    </select>
+    
+    <!-- 查询置顶反馈 -->
+    <select id="selectTopFeedbacks" resultType="com.cemetery.domain.entity.ServiceFeedback">
+        SELECT * FROM service_feedback
+        WHERE provider_id = #{providerId} 
+              AND is_top = 1 
+              AND audit_status = 2 
+              AND deleted = 0
+        ORDER BY like_count DESC, feedback_time DESC
+        <if test="limit != null">
+            LIMIT #{limit}
+        </if>
+    </select>
+    
+    <!-- 增加点赞次数 -->
+    <update id="incrementLikeCount">
+        UPDATE service_feedback 
+        SET like_count = like_count + 1 
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 计算服务商平均评分 -->
+    <select id="calculateAverageRating" resultType="java.math.BigDecimal">
+        SELECT AVG(rating) FROM service_feedback
+        WHERE provider_id = #{providerId} 
+              AND audit_status = 2 
+              AND deleted = 0
+    </select>
+    
+    <!-- 统计服务商反馈数量 -->
+    <select id="countFeedbacksByProvider" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM service_feedback
+        <where>
+            provider_id = #{providerId} AND deleted = 0 AND audit_status = 2
+            <if test="feedbackType != null">
+                AND feedback_type = #{feedbackType}
+            </if>
+        </where>
+    </select>
+    
+    <!-- 获取反馈统计信息 -->
+    <select id="getFeedbackStatistics" resultType="java.util.Map">
+        SELECT 
+            COUNT(*) as total_count,
+            AVG(rating) as avg_rating,
+            AVG(service_rating) as avg_service_rating,
+            AVG(quality_rating) as avg_quality_rating,
+            AVG(speed_rating) as avg_speed_rating,
+            SUM(CASE WHEN feedback_type = 1 THEN 1 ELSE 0 END) as evaluation_count,
+            SUM(CASE WHEN feedback_type = 2 THEN 1 ELSE 0 END) as complaint_count
+        FROM service_feedback
+        WHERE provider_id = #{providerId} AND audit_status = 2 AND deleted = 0
+    </select>
+    
+</mapper>

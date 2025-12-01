@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.ProviderServiceMapper">
+    
+    <!-- 根据服务编号查询 -->
+    <select id="selectByServiceNo" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service 
+        WHERE service_no = #{serviceNo} AND deleted = 0 
+        LIMIT 1
+    </select>
+    
+    <!-- 根据服务商ID分页查询服务项目 -->
+    <select id="selectByProviderId" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service
+        <where>
+            provider_id = #{providerId} AND deleted = 0
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY sort_order ASC, create_time DESC
+    </select>
+    
+    <!-- 搜索服务项目（支持关键词、分类、价格区间） -->
+    <select id="searchServices" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service
+        <where>
+            deleted = 0 AND status = 1
+            <if test="keyword != null and keyword != ''">
+                AND (service_name LIKE CONCAT('%', #{keyword}, '%') 
+                     OR description LIKE CONCAT('%', #{keyword}, '%')
+                     OR service_content LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="category != null">
+                AND service_category = #{category}
+            </if>
+            <if test="minPrice != null">
+                AND price &gt;= #{minPrice}
+            </if>
+            <if test="maxPrice != null">
+                AND price &lt;= #{maxPrice}
+            </if>
+        </where>
+        ORDER BY is_recommended DESC, is_hot DESC, sales_count DESC
+    </select>
+    
+    <!-- 查询热门服务 -->
+    <select id="selectHotServices" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service
+        WHERE is_hot = 1 AND status = 1 AND deleted = 0
+        ORDER BY sales_count DESC, rating DESC
+        LIMIT #{limit}
+    </select>
+    
+    <!-- 查询新品服务 -->
+    <select id="selectNewServices" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service
+        WHERE is_new = 1 AND status = 1 AND deleted = 0
+        ORDER BY publish_time DESC
+        LIMIT #{limit}
+    </select>
+    
+    <!-- 查询推荐服务 -->
+    <select id="selectRecommendedServices" resultType="com.cemetery.domain.entity.ProviderService">
+        SELECT * FROM provider_service
+        WHERE is_recommended = 1 AND status = 1 AND deleted = 0
+        ORDER BY sort_order ASC, rating DESC
+        LIMIT #{limit}
+    </select>
+    
+    <!-- 增加浏览次数 -->
+    <update id="incrementViewCount">
+        UPDATE provider_service 
+        SET view_count = view_count + 1 
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 增加销售数量 -->
+    <update id="incrementSalesCount">
+        UPDATE provider_service 
+        SET sales_count = sales_count + #{quantity}
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 更新库存 -->
+    <update id="updateStock">
+        UPDATE provider_service 
+        SET stock = stock - #{quantity}
+        WHERE id = #{id} AND stock &gt;= #{quantity}
+    </update>
+    
+    <!-- 统计服务商的服务数量 -->
+    <select id="countServicesByProvider" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM provider_service
+        WHERE provider_id = #{providerId} AND deleted = 0
+    </select>
+    
+</mapper>

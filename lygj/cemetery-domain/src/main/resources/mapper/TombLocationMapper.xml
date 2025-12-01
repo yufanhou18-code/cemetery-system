@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.TombLocationMapper">
+
+    <!-- 根据墓位编号查询 -->
+    <select id="selectByTombNo" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE tomb_no = #{tombNo} AND deleted = 0
+    </select>
+
+    <!-- 根据区域编码查询墓位列表 -->
+    <select id="selectByAreaCode" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE area_code = #{areaCode} AND deleted = 0
+        ORDER BY row_num, col_num
+    </select>
+
+    <!-- 根据墓位状态查询 -->
+    <select id="selectByStatus" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE status = #{status} AND deleted = 0
+        ORDER BY area_code, row_num, col_num
+    </select>
+
+    <!-- 根据墓位类型查询 -->
+    <select id="selectByTombType" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE tomb_type = #{tombType} AND deleted = 0
+        ORDER BY area_code, row_num, col_num
+    </select>
+
+    <!-- 根据所有者ID查询墓位列表 -->
+    <select id="selectByOwnerId" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE owner_id = #{ownerId} AND deleted = 0
+        ORDER BY purchase_date DESC
+    </select>
+
+    <!-- 查询空闲墓位 -->
+    <select id="selectAvailableTombs" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE status = 1 AND deleted = 0
+        ORDER BY area_code, price
+    </select>
+
+    <!-- 根据区域和状态查询墓位 -->
+    <select id="selectByAreaAndStatus" resultType="com.cemetery.domain.entity.TombLocation">
+        SELECT * FROM tomb_location
+        WHERE area_code = #{areaCode} AND status = #{status} AND deleted = 0
+        ORDER BY row_num, col_num
+    </select>
+
+</mapper>

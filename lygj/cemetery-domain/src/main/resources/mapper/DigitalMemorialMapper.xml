@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.DigitalMemorialMapper">
+
+    <!-- 结果映射 -->
+    <resultMap id="BaseResultMap" type="com.cemetery.domain.entity.DigitalMemorial">
+        <id column="id" property="id"/>
+        <result column="space_no" property="spaceNo"/>
+        <result column="tomb_id" property="tombId"/>
+        <result column="deceased_id" property="deceasedId"/>
+        <result column="space_name" property="spaceName"/>
+        <result column="biography" property="biography"/>
+        <result column="life_achievements" property="lifeAchievements"/>
+        <result column="family_words" property="familyWords"/>
+        <result column="access_permission" property="accessPermission"/>
+        <result column="access_password" property="accessPassword"/>
+        <result column="background_theme" property="backgroundTheme"/>
+        <result column="background_color" property="backgroundColor"/>
+        <result column="background_image" property="backgroundImage"/>
+        <result column="music_enabled" property="musicEnabled"/>
+        <result column="music_url" property="musicUrl"/>
+        <result column="music_name" property="musicName"/>
+        <result column="candle_enabled" property="candleEnabled"/>
+        <result column="flower_enabled" property="flowerEnabled"/>
+        <result column="incense_enabled" property="incenseEnabled"/>
+        <result column="message_enabled" property="messageEnabled"/>
+        <result column="message_audit" property="messageAudit"/>
+        <result column="visit_count" property="visitCount"/>
+        <result column="candle_count" property="candleCount"/>
+        <result column="flower_count" property="flowerCount"/>
+        <result column="incense_count" property="incenseCount"/>
+        <result column="message_count" property="messageCount"/>
+        <result column="is_published" property="isPublished"/>
+        <result column="publish_time" property="publishTime"/>
+        <result column="expire_time" property="expireTime"/>
+        <result column="qr_code" property="qrCode"/>
+        <result column="share_url" property="shareUrl"/>
+        <result column="create_time" property="createTime"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="deleted" property="deleted"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <!-- 关联查询结果映射 -->
+    <resultMap id="DetailResultMap" type="com.cemetery.domain.entity.DigitalMemorial" extends="BaseResultMap">
+        <association property="tombLocation" javaType="com.cemetery.domain.entity.TombLocation">
+            <id column="tomb_id" property="id"/>
+            <result column="tomb_no" property="tombNo"/>
+        </association>
+        <association property="deceasedInfo" javaType="com.cemetery.domain.entity.DeceasedInfo">
+            <id column="deceased_id" property="id"/>
+            <result column="deceased_name" property="deceasedName"/>
+            <result column="photo" property="photo"/>
+        </association>
+    </resultMap>
+
+    <!-- 查询已发布的纪念空间（分页） -->
+    <select id="selectPublishedMemorials" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE deleted = 0 AND is_published = 1
+        ORDER BY publish_time DESC
+    </select>
+
+    <!-- 关联查询纪念空间详情 -->
+    <select id="selectMemorialWithDetails" resultMap="DetailResultMap">
+        SELECT 
+            dm.*,
+            tl.tomb_no,
+            di.deceased_name,
+            di.photo
+        FROM digital_memorial dm
+        LEFT JOIN tomb_location tl ON dm.tomb_id = tl.id
+        LEFT JOIN deceased_info di ON dm.deceased_id = di.id
+        WHERE dm.id = #{id} AND dm.deleted = 0
+    </select>
+
+    <!-- 根据空间编号查询 -->
+    <select id="selectBySpaceNo" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE space_no = #{spaceNo} AND deleted = 0
+    </select>
+
+    <!-- 根据逝者ID查询 -->
+    <select id="selectByDeceasedId" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE deceased_id = #{deceasedId} AND deleted = 0
+    </select>
+
+    <!-- 根据墓位ID查询 -->
+    <select id="selectByTombId" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE tomb_id = #{tombId} AND deleted = 0
+    </select>
+
+    <!-- 查询热门纪念空间 -->
+    <select id="selectPopularMemorials" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE deleted = 0 AND is_published = 1
+        ORDER BY visit_count DESC, candle_count DESC, flower_count DESC
+        LIMIT #{limit}
+    </select>
+
+    <!-- 查询即将到期的纪念空间 -->
+    <select id="selectExpiringMemorials" resultMap="BaseResultMap">
+        SELECT * FROM digital_memorial
+        WHERE deleted = 0 
+        AND expire_time IS NOT NULL
+        AND expire_time BETWEEN NOW() AND DATE_ADD(NOW(), INTERVAL #{days} DAY)
+        ORDER BY expire_time ASC
+    </select>
+
+    <!-- 统计纪念空间数量 -->
+    <select id="countMemorials" resultType="long">
+        SELECT COUNT(*) FROM digital_memorial
+        WHERE deleted = 0
+        <if test="isPublished != null">
+            AND is_published = #{isPublished}
+        </if>
+    </select>
+
+    <!-- 按访问权限统计 -->
+    <select id="countByAccessPermission" resultType="map">
+        SELECT 
+            access_permission as permission,
+            COUNT(*) as count
+        FROM digital_memorial
+        WHERE deleted = 0
+        GROUP BY access_permission
+    </select>
+
+    <!-- 增加访问次数 -->
+    <update id="incrementVisitCount">
+        UPDATE digital_memorial
+        SET visit_count = visit_count + 1
+        WHERE id = #{id}
+    </update>
+
+    <!-- 增加点烛次数 -->
+    <update id="incrementCandleCount">
+        UPDATE digital_memorial
+        SET candle_count = candle_count + 1
+        WHERE id = #{id}
+    </update>
+
+    <!-- 增加献花次数 -->
+    <update id="incrementFlowerCount">
+        UPDATE digital_memorial
+        SET flower_count = flower_count + 1
+        WHERE id = #{id}
+    </update>
+
+    <!-- 增加上香次数 -->
+    <update id="incrementIncenseCount">
+        UPDATE digital_memorial
+        SET incense_count = incense_count + 1
+        WHERE id = #{id}
+    </update>
+
+</mapper>

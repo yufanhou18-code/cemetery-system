@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cemetery.domain.mapper.ServiceProviderMapper">
+    <select id="selectByProviderNo" resultType="com.cemetery.domain.entity.ServiceProvider">
+        SELECT * FROM service_provider WHERE provider_no = #{providerNo} AND deleted = 0 LIMIT 1
+    </select>
+    <select id="selectByUserId" resultType="com.cemetery.domain.entity.ServiceProvider">
+        SELECT * FROM service_provider WHERE user_id = #{userId} AND deleted = 0 LIMIT 1
+    </select>
+    <select id="searchProviders" resultType="com.cemetery.domain.entity.ServiceProvider">
+        SELECT * FROM service_provider
+        <where>
+            deleted = 0
+            <if test="keyword != null and keyword != ''">
+                AND (provider_name LIKE CONCAT('%', #{keyword}, '%') OR description LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+            <if test="auditStatus != null">
+                AND audit_status = #{auditStatus}
+            </if>
+            <if test="isRecommended != null">
+                AND is_recommended = #{isRecommended}
+            </if>
+        </where>
+        ORDER BY is_recommended DESC, sort_order ASC, rating DESC
+    </select>
+    <select id="selectRecommendedProviders" resultType="com.cemetery.domain.entity.ServiceProvider">
+        SELECT * FROM service_provider WHERE is_recommended = 1 AND status = 1 AND deleted = 0
+        ORDER BY sort_order ASC, rating DESC LIMIT #{limit}
+    </select>
+    <select id="selectByCity" resultType="com.cemetery.domain.entity.ServiceProvider">
+        SELECT * FROM service_provider
+        WHERE province = #{province} AND city = #{city} AND status = 1 AND deleted = 0
+        ORDER BY rating DESC
+    </select>
+    <update id="updateRating">
+        UPDATE service_provider SET rating = #{rating} WHERE id = #{id}
+    </update>
+    <update id="incrementServiceCount">
+        UPDATE service_provider SET service_count = service_count + 1 WHERE id = #{id}
+    </update>
+    <update id="incrementComplaintCount">
+        UPDATE service_provider SET complaint_count = complaint_count + 1 WHERE id = #{id}
+    </update>
+    <select id="countProviders" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM service_provider
+        <where>
+            deleted = 0
+            <if test="status != null">AND status = #{status}</if>
+            <if test="auditStatus != null">AND audit_status = #{auditStatus}</if>
+        </where>
+    </select>
+    <select id="getProviderStatistics" resultType="java.util.Map">
+        SELECT 
+            COUNT(*) as total_count,
+            SUM(service_count) as total_services,
+            AVG(rating) as avg_rating
+        FROM service_provider
+        WHERE deleted = 0
+        <if test="startDate != null">AND create_time >= #{startDate}</if>
+        <if test="endDate != null">AND create_time &lt;= #{endDate}</if>
+    </select>
+</mapper>
