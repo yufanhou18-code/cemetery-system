@@ -1,100 +1,273 @@
-# ⚰️ 陵园管家智慧墓园管理系统 (Cemetery System)
+# ⚰️ 陵园管家智慧墓园管理系统 (Cemetery System)  
+# 🏁 团队极速启动指南（必读）
 
-> 本项目是一个基于 Spring Boot + Vue + 微信小程序的智慧墓园综合管理平台。
-
----
-
-## 🛠️ 环境准备 (Prerequisites)
-
-在运行项目前，请确保你的电脑已安装以下环境：
-
-* **Java JDK**: 推荐 JDK 17 或 JDK 21 (本项目已做 JDK 21 兼容适配)。
-* **Database**: MySQL 8.0+。
-* **Cache**: Redis 5.0+ (**必须启动，否则后端无法运行**)。
-* **Node.js**: v16+ (用于运行前端管理后台)。
-* **IDE**: IntelliJ IDEA (后端) + VS Code (前端) + 微信开发者工具 (小程序)。
-* **Git**: 用于版本控制。
+> **写在前面 (致组员)：**  
+> 本项目包含 **Java 后端、Vue 前端、微信小程序、MySQL、Redis**。  
+> 因组员开发环境不同，经常出现下载失败、外键约束失败、依赖冲突等问题。  
+> **请务必严格按照本指南步骤执行。**  
+> 遇到任何报错，先检查自己的版本和查看文末【🚑 故障排除】。如果依然不能解决，结合一下AI
 
 ---
 
-## 🚀 快速启动指南 (Quick Start)
+---
 
-### 1. 数据库配置 (Database Setup)
-**⚠️以此顺序执行 SQL 脚本至关重要，否则会报外键错误！**
+# 🏗️ 第一阶段：软件安装与环境准备（必做）
 
-1.  创建一个空的数据库，命名为 `cemetery_db`。
-2.  在 DataGrip 或 Navicat 中，按以下顺序运行项目 `lygj/sql/` 目录下的脚本：
-    * 1️⃣ **`schema.sql`** (初始化核心表结构)
-    * 2️⃣ **`fix_missing_data.sql`** (**关键补丁！** 补全缺失的基础用户和订单数据)
-    * 3️⃣ **`service_provider_schema.sql`** (服务商模块扩展)
-    * 4️⃣ **`digital_memorial_schema.sql`** (数字纪念馆扩展)
+下列软件必须全部安装，缺一不可。未安装请点击链接下载（一路下一步即可）。
 
-### 2. 后端启动 (Backend)
-1.  使用 **IntelliJ IDEA** 打开 `lygj` 文件夹（包含 `pom.xml` 的目录）。
-2.  等待 Maven 依赖下载完成（建议配置阿里云镜像加速）。
-3.  修改配置文件 `cemetery-admin/src/main/resources/application.yml`：
-    ```yaml
-    spring:
-      datasource:
-        username: root
-        password: 你的MySQL密码  <-- 修改这里
-    ```
-4.  **确保 Redis 已启动** (运行 `redis-server.exe`)。
-5.  运行 `CemeteryAdminApplication.java` 启动项目。
-6.  启动成功后，接口文档地址：`http://localhost:8080/doc.html`
-
-### 3. 前端管理后台启动 (Web Admin)
-1.  使用 **VS Code** 打开目录：`lygj/cemetery-admin/src/main/frontend`。
-2.  打开终端，执行命令：
-    ```bash
-    npm install   # 安装依赖 (建议配置 npm 淘宝/腾讯镜像)
-    npm run dev   # 启动项目
-    ```
-3.  访问终端显示的本地链接（如 `http://localhost:5173`）即可登录后台。
-
-### 4. 微信小程序启动 (Mini Program)
-1.  打开 **微信开发者工具** -> 导入项目。
-2.  选择目录：`lygj/cemetery-miniprogram`。
-3.  **重要设置**：点击右上角【详情】->【本地设置】，**勾选** ✅“不校验合法域名、web-view...”。
-4.  编译即可预览。
+| 软件名称 | 版本要求 | 说明 |
+|--------|---------|------|
+| **Git** | 最新版 | https://git-scm.com/download/win |
+| **JDK** | **21** | 项目已统一适配 JDK 21（不要用 1.8/17） |
+| **IntelliJ IDEA** | 2023+ | 后端开发必备 |
+| **MySQL** | 8.0+ | 推荐与 DataGrip / Navicat 搭配使用 |
+| **Redis** | 5.0+ | Windows 下载：https://github.com/tporadowski/redis/releases/download/v5.0.14.1/Redis-x64-5.0.14.1.zip |
+| **Node.js** | LTS 最新版 | 前端后台依赖 Node 环境 |
+| **微信开发者工具** | 最新版 | 小程序调试 |
 
 ---
 
-## 🔧 常见问题与故障排除 (Troubleshooting)
+---
 
-如果在部署过程中遇到问题，请参考以下我们在开发过程中踩过的坑及解决方案：
+# 📥 第二阶段：获取代码 / 解决 GitHub 连接失败
 
-### 1. 🔴 数据库报错：Foreign key constraint fails
-* **现象**：运行扩展脚本时，提示外键约束失败，无法插入数据。
-* **原因**：原版脚本 `schema.sql` 只有 3 个用户，但扩展脚本试图引用 ID 为 1000+ 的用户。
-* **解决**：务必运行我们新增的 **`sql/fix_missing_data.sql`** 补丁脚本，它会自动补全缺失的用户、订单和逝者数据。
+## 🔧 如果 GitHub 克隆失败（网络问题）
 
-### 2. 🔴 Java 编译报错：java.lang.ExceptionInInitializerError (TypeTag :: UNKNOWN)
-* **现象**：IDEA 启动时报错，提示 Lombok 异常。
-* **原因**：JDK 21 与旧版 Lombok 不兼容。
-* **解决**：已在 `pom.xml` 中将 Lombok 升级至 **1.18.30+** 版本。请重新加载 Maven 依赖。
+克隆时报错：
 
-### 3. 🔴 编译报错：List.of() 找不到符号
-* **现象**：提示找不到 `List.of` 方法。
-* **原因**：项目语言级别可能被错误识别为 Java 8，而 `List.of` 是 Java 9+ 特性。
-* **解决**：代码已统一修改为兼容性更好的 `Arrays.asList(...)` 写法。
-
-### 4. 🔴 启动报错：RedisConnectionException / Connection refused
-* **现象**：后端启动失败，控制台大量报错连接拒绝。
-* **原因**：本地 Redis 服务未启动。
-* **解决**：请下载并运行 Windows 版 Redis，保持 `redis-server.exe` 黑框窗口开启。
-
-### 5. 🔴 Git 推送报错：Failed to connect to github.com port 443
-* **现象**：无法 `git push` 代码到 GitHub。
-* **原因**：网络代理配置不当。
-* **解决**：检查代理软件（如 v2rayN）的端口号，并在终端配置 Git 代理（注意区分 HTTP 和 SOCKS 端口）：
-    ```bash
-    # 示例（根据实际端口修改）：
-    git config --global http.proxy [http://127.0.0.1:10809](http://127.0.0.1:10809)
-    git config --global https.proxy [http://127.0.0.1:10809](http://127.0.0.1:10809)
-    ```
+```
+Failed to connect to github.com port 443
+```
+说明 GitHub 被墙。
 
 ---
 
-## 👥 贡献说明
-提交代码前，请确保已执行 `git pull` 同步最新进度。数据库变更请务必同步更新 SQL 脚本。
+### ✅ 情况 1：你使用加速器（v2rayN / clash 等）
+
+查看加速器底部显示的 **HTTP 代理端口**（一般是 10809）。  
+在终端设置 Git 代理：
+
+```bash
+git config --global http.proxy http://127.0.0.1:10809
+git config --global https.proxy http://127.0.0.1:10809
+```
+
+---
+
+### ✅ 情况 2：你没用加速器
+
+下载并开启 **Watt Toolkit（原 Steam++） → GitHub 加速**。
+
+---
+
+## 🔽 克隆项目
+
+在你希望放置项目的目录右键 → **Open Git Bash Here**
+
+```bash
+git clone https://github.com/yufanhou18-code/cemetery-system.git
+```
+
+---
+
+---
+
+# 🗄️ 第三阶段：数据库初始化（最容易出错！）
+
+⚠️ 必须严格按顺序执行 SQL 脚本！否则一定会报外键约束错误。
+
+## 1. 创建数据库
+打开 DataGrip / Navicat → 新建数据库：（不确定MySQLworkbench是否可以，我用的是datagrip）
+
+```
+cemetery_db
+```
+
+## 2. 按顺序执行 lygj/sql 目录下的脚本：
+
+### 1️⃣ schema.sql  
+创建基础表结构。
+
+### 2️⃣ fix_missing_data.sql（最关键）  
+补全缺失的用户、订单等必需数据。  
+❗ **漏执行这一项会导致所有后续步骤报错！**
+
+### 3️⃣ service_provider_schema.sql  
+导入服务商模块表。
+
+### 4️⃣ digital_memorial_schema.sql  
+导入数字纪念馆模块表。
+
+---
+
+---
+
+# ☕ 第四阶段：后端启动（IntelliJ IDEA）
+
+## 1. IDEA 打开项目
+打开目录：
+
+```
+lygj/
+```
+
+右下角若提示 **Load Maven Project** → 点击加载。
+
+---
+
+## 2. Maven 下载太慢 → 配置阿里云镜像（这一步和网络有关，可能一会儿成功一会儿不成功）
+编辑文件：
+
+```
+C:\Users\你的用户名\.m2\settings.xml
+```
+
+---
+
+## 3. 修改数据库密码
+
+编辑文件：
+```
+cemetery-admin/src/main/resources/application.yml
+```
+
+找到：
+```
+spring.datasource.password: 你的数据库密码
+```
+改成自己的 MySQL 密码。
+
+---
+
+## 4. 启动 Redis
+
+进入 Redis 文件夹，双击运行：
+
+```
+redis-server.exe
+```
+
+⚠️ 黑色窗口不能关！关掉后端会报：
+
+```
+RedisConnectionException: Connection refused
+```
+
+---
+
+## 5. 启动后端
+
+在 IDEA 打开：
+
+```
+CemeteryAdminApplication.java
+```
+
+点击绿色三角启动。
+
+看到：
+
+```
+Started CemeteryAdminApplication in ... seconds
+```
+
+即可。
+
+后端接口文档地址：
+
+```
+http://localhost:8080/doc.html
+```
+
+---
+
+---
+
+# 🖥️ 第五阶段：前端启动
+
+---
+
+## 1. 后台管理系统（Vue 前端）
+
+工具：VS Code  
+打开目录：
+
+```
+lygj/cemetery-admin/src/main/frontend
+```
+
+安装依赖：
+```bash
+npm install
+```
+
+启动：
+```bash
+npm run dev
+```
+
+访问：
+```
+http://localhost:5173
+```
+
+---
+
+## 2. 微信小程序前端
+
+这步不归我，我没测试到这儿
+
+---
+
+---
+
+# 🚑 故障排除 (Cheat Sheet)
+
+---
+
+## 🔴 1. Foreign key constraint fails  
+**原因：** 未执行 `fix_missing_data.sql`  
+**解决：** 执行该脚本。
+
+---
+
+## 🔴 2. IDEA 报错  
+```
+java.lang.ExceptionInInitializerError
+TypeTag :: UNKNOWN
+```
+**原因：** JDK 21 与旧版 Lombok 冲突。
+
+**解决：** IDEA 右侧 Maven 面板 → 点击 **Reload** 刷新依赖。
+
+---
+
+## 🔴 3. 报错：List.of 找不到符号  
+**原因：JDK 版本识别错误**  
+**解决：** 拉取最新代码（已统一改为 Arrays.asList）
+
+---
+
+## 🔴 4. RedisConnectionException / Connection refused  
+**原因：Redis 未启动**  
+**解决：** 再次运行 `redis-server.exe`（窗口不要关闭）
+
+---
+
+## 🔴 5. Access denied for user 'root'  
+**原因：application.yml 中的数据库密码不对**  
+**解决：** 改为正确密码。
+
+---
+
+---
+
+# 🎉 恭喜你，环境配置完成！  
+如果你需要我做：
+
+- 小白版配图安装指南  
+- 视频脚本版教程  
+- 适配你们团队的 README 主题风格  
+- 自动检查脚本（bat / shell）
+
+我也可以继续帮你整理。
