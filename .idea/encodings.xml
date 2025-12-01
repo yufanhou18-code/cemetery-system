@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-miniprogram/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-miniprogram/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/cemetery-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lygj/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * 文件上传配置
@@ -69,21 +70,30 @@ public class FileUploadConfig {
      */
     private Integer videoThumbnailTime = 3;
 
-    /**
-     * 允许的图片格式
-     */
-    private List<String> allowedImageFormats = List.of("jpg", "jpeg", "png", "gif", "webp", "bmp");
 
-    /**
+     private List<String> allowedImageFormats = Arrays.asList("jpg", "jpeg", "png", "gif", "webp", "bmp");
+
+     /**
      * 允许的视频格式
      */
-    private List<String> allowedVideoFormats = List.of("mp4", "avi", "mov", "wmv", "flv", "mkv");
+    private List<String> allowedVideoFormats = Arrays.asList("mp4", "avi", "mov", "wmv", "flv", "mkv");
 
     /**
      * 允许的音频格式
      */
-    private List<String> allowedAudioFormats = List.of("mp3", "wav", "flac", "aac", "ogg");
+    private List<String> allowedAudioFormats = Arrays.asList("mp3", "wav", "flac", "aac", "ogg");
 
+    public java.util.List<String> getAllowedImageFormats() {
+        return allowedImageFormats;
+    }
+
+    public java.util.List<String> getAllowedVideoFormats() {
+        return allowedVideoFormats;
+    }
+
+    public java.util.List<String> getAllowedAudioFormats() {
+        return allowedAudioFormats;
+    }
     /**
      * 是否启用WebP转换
      */

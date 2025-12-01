@@ -1,0 +1,843 @@
+2025-12-01 11:18:26.763  INFO 16028 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Starting CemeteryApplication using Java 21.0.8 on yybcomputer with PID 16028 (D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system\lygj\cemetery-web\target\classes started by yufan in D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system)
+2025-12-01 11:18:26.764 DEBUG 16028 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-12-01 11:18:26.765  INFO 16028 --- [restartedMain] com.cemetery.web.CemeteryApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-01 11:18:26.841  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\com\mchange\c3p0\0.9.5.4\c3p0-0.9.5.4.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/com/mchange/c3p0/0.9.5.4/mchange-commons-java-0.2.15.jar
+2025-12-01 11:18:26.842  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\javacv\1.5.8\javacv-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas-0.3.21-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv-4.6.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg-5.1.2-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture-2.13.3.31-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394-2.2.6-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect-0.5.7-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2-0.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense-1.12.4-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2-2.50.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput-0.200-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus-2.3.1-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark-1.07-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica-1.82.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract-5.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/android-4.1.1.4.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-i586.jar
+2025-12-01 11:18:26.842  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\openblas\0.3.21-1.5.8\openblas-0.3.21-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/javacpp.jar
+2025-12-01 11:18:26.842  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\opencv\4.6.0-1.5.8\opencv-4.6.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\ffmpeg\5.1.2-1.5.8\ffmpeg-5.1.2-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flycapture\2.13.3.31-1.5.8\flycapture-2.13.3.31-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libdc1394\2.2.6-1.5.8\libdc1394-2.2.6-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect\0.5.7-1.5.8\libfreenect-0.5.7-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect2\0.2.0-1.5.8\libfreenect2-0.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense\1.12.4-1.5.8\librealsense-1.12.4-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense2\2.50.0-1.5.8\librealsense2-2.50.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\videoinput\0.200-1.5.8\videoinput-0.200-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\artoolkitplus\2.3.1-1.5.8\artoolkitplus-2.3.1-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flandmark\1.07-1.5.8\flandmark-1.07-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\leptonica\1.82.0-1.5.8\leptonica-1.82.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\tesseract\5.2.0-1.5.8\tesseract-5.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/javacpp.jar
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-01 11:18:26.843  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-01 11:18:30.781  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 11:18:30.790  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 11:18:30.825  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-12-01 11:18:33.079  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-01 11:18:33.080  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-01 11:18:33.080  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-12-01 11:18:33.081  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-12-01 11:18:33.087  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-01 11:18:33.100  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-01 11:18:33.100  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-01 11:18:33.328  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-01 11:18:33.329  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6485 ms
+2025-12-01 11:18:33.455  INFO 16028 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2025-12-01 11:18:33.899 ERROR 16028 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : init datasource error, url: jdbc:mysql://localhost:3306/cemetery_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:118) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:764) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:232) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1703) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1786) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:925) ~[druid-1.2.16.jar:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1492) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1616) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1417) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2113) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.addBinders(MeterRegistryConfigurer.java:87) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:68) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:204) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:98) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.cemetery.web.CemeteryApplication.main(CemeteryApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.18.jar:2.7.18]
+
+2025-12-01 11:18:33.908 ERROR 16028 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:118) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:764) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:232) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1703) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1786) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:925) ~[druid-1.2.16.jar:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1492) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1616) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1417) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2113) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.addBinders(MeterRegistryConfigurer.java:87) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:68) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:204) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:98) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.cemetery.web.CemeteryApplication.main(CemeteryApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.18.jar:2.7.18]
+
+2025-12-01 11:18:33.911  INFO 16028 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2025-12-01 11:18:33.914 ERROR 16028 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2025-12-01 11:18:33.920 ERROR 16028 --- [Druid-ConnectionPool-Create-46464063] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/cemetery_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:118) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:764) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:232) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1703) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1786) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2910) ~[druid-1.2.16.jar:na]
+
+2025-12-01 11:18:33.923 ERROR 16028 --- [Druid-ConnectionPool-Create-46464063] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://localhost:3306/cemetery_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true, errorCode 1045, state 28000
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:118) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:764) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:232) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1703) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1786) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2910) ~[druid-1.2.16.jar:na]
+
+2025-12-01 11:18:33.924  INFO 16028 --- [Druid-ConnectionPool-Create-46464063] c.a.druid.pool.DruidAbstractDataSource   : {dataSource-1} failContinuous is true
+2025-12-01 11:18:33.955  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-01 11:18:33.961  WARN 16028 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Create-46464063] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleep0(Native Method)
+ java.base/java.lang.Thread.sleep(Thread.java:509)
+ com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2933)
+2025-12-01 11:18:33.961  WARN 16028 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Destroy-46464063] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleep0(Native Method)
+ java.base/java.lang.Thread.sleep(Thread.java:509)
+ com.alibaba.druid.pool.DruidDataSource$DestroyConnectionThread.run(DruidDataSource.java:2984)
+2025-12-01 11:18:33.962  WARN 16028 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2025-12-01 11:18:33.974  INFO 16028 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-01 11:18:34.000 ERROR 16028 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.cemetery.web.CemeteryApplication.main(CemeteryApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.18.jar:2.7.18]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.7.18.jar:2.7.18]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:204) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:98) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.7.18.jar:2.7.18]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1616) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1417) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2113) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.addBinders(MeterRegistryConfigurer.java:87) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:68) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64) ~[spring-boot-actuator-autoconfigure-2.7.18.jar:2.7.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 66 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1492) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 88 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:118) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:764) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:232) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:112) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1703) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1786) ~[druid-1.2.16.jar:na]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:925) ~[druid-1.2.16.jar:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 102 common frames omitted
+
+2025-12-01 11:20:24.907  INFO 7660 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Starting CemeteryApplication using Java 21.0.8 on yybcomputer with PID 7660 (D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system\lygj\cemetery-web\target\classes started by yufan in D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system)
+2025-12-01 11:20:24.908 DEBUG 7660 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-12-01 11:20:24.909  INFO 7660 --- [restartedMain] com.cemetery.web.CemeteryApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-01 11:20:24.981  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\com\mchange\c3p0\0.9.5.4\c3p0-0.9.5.4.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/com/mchange/c3p0/0.9.5.4/mchange-commons-java-0.2.15.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\javacv\1.5.8\javacv-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas-0.3.21-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv-4.6.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg-5.1.2-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture-2.13.3.31-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394-2.2.6-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect-0.5.7-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2-0.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense-1.12.4-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2-2.50.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput-0.200-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus-2.3.1-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark-1.07-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica-1.82.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract-5.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/android-4.1.1.4.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-i586.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\openblas\0.3.21-1.5.8\openblas-0.3.21-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\opencv\4.6.0-1.5.8\opencv-4.6.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\ffmpeg\5.1.2-1.5.8\ffmpeg-5.1.2-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flycapture\2.13.3.31-1.5.8\flycapture-2.13.3.31-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libdc1394\2.2.6-1.5.8\libdc1394-2.2.6-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect\0.5.7-1.5.8\libfreenect-0.5.7-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect2\0.2.0-1.5.8\libfreenect2-0.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense\1.12.4-1.5.8\librealsense-1.12.4-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/javacpp.jar
+2025-12-01 11:20:24.982  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense2\2.50.0-1.5.8\librealsense2-2.50.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\videoinput\0.200-1.5.8\videoinput-0.200-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\artoolkitplus\2.3.1-1.5.8\artoolkitplus-2.3.1-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flandmark\1.07-1.5.8\flandmark-1.07-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\leptonica\1.82.0-1.5.8\leptonica-1.82.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\tesseract\5.2.0-1.5.8\tesseract-5.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/javacpp.jar
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-01 11:20:24.983  INFO 7660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-01 11:20:26.785  INFO 7660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 11:20:26.787  INFO 7660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 11:20:26.810  INFO 7660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-12-01 11:20:28.312  INFO 7660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-01 11:20:28.313  INFO 7660 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-01 11:20:28.314  INFO 7660 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-12-01 11:20:28.314  INFO 7660 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-12-01 11:20:28.319  INFO 7660 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-01 11:20:28.330  INFO 7660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-01 11:20:28.330  INFO 7660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-01 11:20:28.586  INFO 7660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-01 11:20:28.587  INFO 7660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3603 ms
+2025-12-01 11:20:28.712  INFO 7660 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2025-12-01 11:20:29.276  INFO 7660 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2025-12-01 11:20:29.504 DEBUG 7660 --- [restartedMain] c.c.web.filter.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-12-01 11:20:30.652  INFO 7660 --- [restartedMain] org.redisson.Version                     : Redisson 3.17.7
+2025-12-01 11:20:30.956  WARN 7660 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authServiceImpl': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisUtils': Unsatisfied dependency expressed through field 'redisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/cemetery/web/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+2025-12-01 11:20:30.957  INFO 7660 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2025-12-01 11:20:30.964  INFO 7660 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2025-12-01 11:20:30.967  INFO 7660 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-01 11:20:30.992  INFO 7660 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-01 11:20:31.034 ERROR 7660 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authServiceImpl': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisUtils': Unsatisfied dependency expressed through field 'redisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/cemetery/web/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
+	at com.cemetery.web.CemeteryApplication.main(CemeteryApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-2.7.18.jar:2.7.18]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authServiceImpl': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisUtils': Unsatisfied dependency expressed through field 'redisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/cemetery/web/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisUtils': Unsatisfied dependency expressed through field 'redisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/cemetery/web/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/cemetery/web/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 51 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 64 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:481) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 78 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.31.jar:5.3.31]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.31.jar:5.3.31]
+	... 92 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$1(ConnectionPool.java:153) ~[redisson-3.17.7.jar:3.17.7]
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194) ~[na:na]
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:317) ~[redisson-3.17.7.jar:3.17.7]
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$7(ConnectionPool.java:276) ~[redisson-3.17.7.jar:3.17.7]
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194) ~[na:na]
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:250) ~[redisson-3.17.7.jar:3.17.7]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097) ~[na:na]
+	... 11 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-12-01 11:26:02.435  INFO 12432 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Starting CemeteryApplication using Java 21.0.8 on yybcomputer with PID 12432 (D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system\lygj\cemetery-web\target\classes started by yufan in D:\zuoyewengao\Java Web\作业\2304-2300770298-侯玙璠-作业8\cemetery-system)
+2025-12-01 11:26:02.436 DEBUG 12432 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-12-01 11:26:02.437  INFO 12432 --- [restartedMain] com.cemetery.web.CemeteryApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\com\mchange\c3p0\0.9.5.4\c3p0-0.9.5.4.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/com/mchange/c3p0/0.9.5.4/mchange-commons-java-0.2.15.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\javacv\1.5.8\javacv-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/javacpp-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/openblas-0.3.21-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/opencv-4.6.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/ffmpeg-5.1.2-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flycapture-2.13.3.31-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libdc1394-2.2.6-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect-0.5.7-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/libfreenect2-0.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense-1.12.4-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/librealsense2-2.50.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/videoinput-0.200-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/artoolkitplus-2.3.1-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/flandmark-1.07-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/leptonica-1.82.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/tesseract-5.2.0-1.5.8.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/android-4.1.1.4.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/gluegen-rt-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jogl-all-2.3.2-natives-windows-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-main-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-aarch64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-android-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-armv6hf.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-linux-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-macosx-universal.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-solaris-i586.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-amd64.jar,file:/C:/Users/yufan/.m2/repository/org/bytedeco/javacv/1.5.8/jocl-2.3.2-natives-windows-i586.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\openblas\0.3.21-1.5.8\openblas-0.3.21-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/openblas/0.3.21-1.5.8/javacpp.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\opencv\4.6.0-1.5.8\opencv-4.6.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/opencv/4.6.0-1.5.8/javacpp.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\ffmpeg\5.1.2-1.5.8\ffmpeg-5.1.2-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/ffmpeg/5.1.2-1.5.8/javacpp.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flycapture\2.13.3.31-1.5.8\flycapture-2.13.3.31-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flycapture/2.13.3.31-1.5.8/javacpp.jar
+2025-12-01 11:26:02.493  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libdc1394\2.2.6-1.5.8\libdc1394-2.2.6-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libdc1394/2.2.6-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect\0.5.7-1.5.8\libfreenect-0.5.7-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect/0.5.7-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\libfreenect2\0.2.0-1.5.8\libfreenect2-0.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/libfreenect2/0.2.0-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense\1.12.4-1.5.8\librealsense-1.12.4-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense/1.12.4-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\librealsense2\2.50.0-1.5.8\librealsense2-2.50.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/librealsense2/2.50.0-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\videoinput\0.200-1.5.8\videoinput-0.200-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/videoinput/0.200-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\artoolkitplus\2.3.1-1.5.8\artoolkitplus-2.3.1-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/artoolkitplus/2.3.1-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\flandmark\1.07-1.5.8\flandmark-1.07-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/flandmark/1.07-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\leptonica\1.82.0-1.5.8\leptonica-1.82.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/leptonica/1.82.0-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\yufan\.m2\repository\org\bytedeco\tesseract\5.2.0-1.5.8\tesseract-5.2.0-1.5.8.jar referenced one or more files that do not exist: file:/C:/Users/yufan/.m2/repository/org/bytedeco/tesseract/5.2.0-1.5.8/javacpp.jar
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-01 11:26:02.494  INFO 12432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-01 11:26:04.244  INFO 12432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 11:26:04.246  INFO 12432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 11:26:04.267  INFO 12432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2025-12-01 11:26:05.706  INFO 12432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-01 11:26:05.708  INFO 12432 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-01 11:26:05.708  INFO 12432 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-12-01 11:26:05.708  INFO 12432 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-12-01 11:26:05.714  INFO 12432 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-01 11:26:05.724  INFO 12432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-01 11:26:05.724  INFO 12432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-01 11:26:05.974  INFO 12432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-01 11:26:05.974  INFO 12432 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3479 ms
+2025-12-01 11:26:06.090  INFO 12432 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2025-12-01 11:26:06.651  INFO 12432 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2025-12-01 11:26:06.876 DEBUG 12432 --- [restartedMain] c.c.web.filter.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-12-01 11:26:07.885  INFO 12432 --- [restartedMain] org.redisson.Version                     : Redisson 3.17.7
+2025-12-01 11:26:08.146  INFO 12432 --- [redisson-netty-2-7] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for localhost/127.0.0.1:6379
+2025-12-01 11:26:08.205  INFO 12432 --- [redisson-netty-2-20] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for localhost/127.0.0.1:6379
+2025-12-01 11:26:09.386  INFO 12432 --- [restartedMain] c.c.service.impl.CacheServiceImpl        : 布隆过滤器初始化成功
+2025-12-01 11:26:09.387  INFO 12432 --- [restartedMain] c.c.service.impl.CacheServiceImpl        : 开始缓存预热...
+2025-12-01 11:26:09.387  INFO 12432 --- [restartedMain] c.c.service.impl.CacheServiceImpl        : 缓存预热完成
+2025-12-01 11:26:10.088  INFO 12432 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-12-01 11:26:10.103  INFO 12432 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-12-01 11:26:10.103  INFO 12432 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2025-12-01 11:26:10.104  INFO 12432 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-12-01 11:26:10.105  INFO 12432 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-12-01 11:26:10.105  INFO 12432 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-12-01 11:26:10.105  INFO 12432 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2025-12-01 11:26:10.105  INFO 12432 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1336d74b
+2025-12-01 11:26:10.155  INFO 12432 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-12-01 11:26:10.430  WARN 12432 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 06421951-0584-41af-8961-c053e340f80c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-01 11:26:10.566  INFO 12432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32dd1c19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d48e6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6246c38, org.springframework.security.web.header.HeaderWriterFilter@2fde2def, org.springframework.security.web.authentication.logout.LogoutFilter@38a80ba5, com.cemetery.web.filter.JwtAuthenticationFilter@1851546b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b24898, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4232833, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62ce7f59, org.springframework.security.web.session.SessionManagementFilter@2450f7f0, org.springframework.security.web.access.ExceptionTranslationFilter@5a2a6f2d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f232393]
+2025-12-01 11:26:10.836  INFO 12432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-01 11:26:11.587  INFO 12432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-01 11:26:12.574  INFO 12432 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-12-01 11:26:12.574  INFO 12432 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-12-01 11:26:12.590  INFO 12432 --- [restartedMain] com.cemetery.web.CemeteryApplication     : Started CemeteryApplication in 10.732 seconds (JVM running for 12.054)
+2025-12-01 11:26:12.981  INFO 12432 --- [RMI TCP Connection(2)-172.20.10.4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-01 11:26:12.981  INFO 12432 --- [RMI TCP Connection(2)-172.20.10.4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-01 11:26:12.985  INFO 12432 --- [RMI TCP Connection(2)-172.20.10.4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-01 11:26:13.059  WARN 12432 --- [RMI TCP Connection(3)-172.20.10.4] e.ElasticsearchRestClientHealthIndicator : Elasticsearch health check failed
+
+java.net.ConnectException: Connection refused: getsockopt
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:932) ~[elasticsearch-rest-client-7.17.15.jar:7.17.15]
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300) ~[elasticsearch-rest-client-7.17.15.jar:7.17.15]
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288) ~[elasticsearch-rest-client-7.17.15.jar:7.17.15]
+	at org.springframework.boot.actuate.elasticsearch.ElasticsearchRestClientHealthIndicator.doHealthCheck(ElasticsearchRestClientHealthIndicator.java:60) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.31.jar:5.3.31]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.7.18.jar:2.7.18]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973) ~[na:na]
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174) ~[httpcore-nio-4.4.16.jar:4.4.16]
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148) ~[httpcore-nio-4.4.16.jar:4.4.16]
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351) ~[httpcore-nio-4.4.16.jar:4.4.16]
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221) ~[httpasyncclient-4.1.5.jar:4.1.5]
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64) ~[httpasyncclient-4.1.5.jar:4.1.5]
+	... 1 common frames omitted
+
+2025-12-01 11:30:00.009  INFO 12432 --- [scheduling-1] c.cemetery.web.task.PaymentTimeoutTask   : 定时任务：开始检查支付超时
+2025-12-01 11:30:00.078  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 开始检查支付超时
+2025-12-01 11:30:00.461  WARN 12432 --- [scheduling-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @41e1e210
+2025-12-01 11:30:00.495  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 支付超时检查完成, 处理数量=0
+2025-12-01 11:35:00.005  INFO 12432 --- [scheduling-1] c.cemetery.web.task.PaymentTimeoutTask   : 定时任务：开始检查支付超时
+2025-12-01 11:35:00.009  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 开始检查支付超时
+2025-12-01 11:35:00.040  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 支付超时检查完成, 处理数量=0
+2025-12-01 11:40:00.004  INFO 12432 --- [scheduling-1] c.cemetery.web.task.PaymentTimeoutTask   : 定时任务：开始检查支付超时
+2025-12-01 11:40:00.036  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 开始检查支付超时
+2025-12-01 11:40:00.136  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 支付超时检查完成, 处理数量=0
+2025-12-01 11:40:34.303  INFO 12432 --- [http-nio-8080-exec-10] c.c.w.c.MemorialStatisticsController     : 获取整体概况统计
+2025-12-01 11:40:34.303  INFO 12432 --- [http-nio-8080-exec-10] c.c.s.i.MemorialStatisticsServiceImpl    : 获取整体概况统计
+2025-12-01 11:40:34.404  INFO 12432 --- [http-nio-8080-exec-6] c.c.w.c.ServiceProviderController        : 获取服务商统计信息
+2025-12-01 11:40:34.443  INFO 12432 --- [http-nio-8080-exec-6] c.c.s.impl.ServiceProviderServiceImpl    : 获取服务商统计信息成功, statistics={pendingCount=0, recommendedCount=2, totalCount=3, approvedCount=3}
+2025-12-01 11:40:34.496  INFO 12432 --- [http-nio-8080-exec-3] c.c.w.c.MemorialStatisticsController     : 获取访问趋势统计, startDate=2025-11-24, endDate=2025-12-01, memorialId=null
+2025-12-01 11:40:34.497  INFO 12432 --- [http-nio-8080-exec-3] c.c.s.i.MemorialStatisticsServiceImpl    : 获取访问趋势统计, startDate=2025-11-24, endDate=2025-12-01, memorialId=null
+2025-12-01 11:40:34.574  INFO 12432 --- [http-nio-8080-exec-9] c.c.w.c.MemorialStatisticsController     : 获取内容类型分布统计, memorialId=null
+2025-12-01 11:40:34.574  INFO 12432 --- [http-nio-8080-exec-9] c.c.s.i.MemorialStatisticsServiceImpl    : 获取内容类型分布统计, memorialId=null
+2025-12-01 11:40:34.681  INFO 12432 --- [http-nio-8080-exec-1] c.c.w.c.MemorialStatisticsController     : 获取热门纪念空间排行, orderBy=visitCount, limit=10
+2025-12-01 11:40:34.682  INFO 12432 --- [http-nio-8080-exec-1] c.c.s.i.MemorialStatisticsServiceImpl    : 获取热门纪念空间排行, orderBy=visitCount, limit=10
+2025-12-01 11:40:34.744  INFO 12432 --- [http-nio-8080-exec-10] c.c.w.c.MemorialStatisticsController     : 获取实时统计数据
+2025-12-01 11:40:34.744  INFO 12432 --- [http-nio-8080-exec-10] c.c.s.i.MemorialStatisticsServiceImpl    : 获取实时统计数据
+2025-12-01 11:45:00.013  INFO 12432 --- [scheduling-1] c.cemetery.web.task.PaymentTimeoutTask   : 定时任务：开始检查支付超时
+2025-12-01 11:45:00.018  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 开始检查支付超时
+2025-12-01 11:45:00.028  INFO 12432 --- [scheduling-1] c.c.service.impl.PaymentServiceImpl      : 支付超时检查完成, 处理数量=0
+2025-12-01 11:48:17.869  INFO 12432 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-12-01 11:48:17.902  INFO 12432 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2025-12-01 11:48:17.902  INFO 12432 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2025-12-01 11:48:17.902  INFO 12432 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-12-01 11:48:17.903  INFO 12432 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2025-12-01 11:48:17.926  INFO 12432 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2025-12-01 11:48:17.928  INFO 12432 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
